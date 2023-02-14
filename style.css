@@ -12,6 +12,7 @@
     box-sizing: border-box;
     border: none;
     list-style: none;
+    outline: none;
     text-decoration: none;
     font-family:  'Mali', cursive;
 }
@@ -21,6 +22,7 @@ html {
     height: 100vh;
     font-size: 62.5%;
     overflow-x: hidden; /* não vai ter barra de rolagem horizontal */
+    scroll-behavior: smooth;
 }
 
 
@@ -34,8 +36,8 @@ html {
     align-items: center;
     background-color: #222222;
     position: fixed;  /* o menu vai ficar fixado na tela quando rolar a barra de rolagem */
-
     padding-left: 30rem;
+
 
 }
 
@@ -52,6 +54,10 @@ html {
     font-size: 1.6rem;
 }
 
+.logo img {
+    width: 100%;
+    height: 100%;
+}
 
 .content .list-menu {
     width: 500px;
@@ -70,7 +76,7 @@ html {
     font-size: 1.5rem;
     text-transform: uppercase;
     font-weight: 500;
-    transition: all 200ms;
+    transition: all 200ms ease-in;
 }
 
 .content .list-menu li a:hover {
@@ -113,9 +119,9 @@ html {
 
 .first-section h1 {
     color: #ffc506;
-    font-size: 4rem;
+    font-size: 3rem;
     text-transform: uppercase;
-    margin-bottom: 1rem;
+    margin-bottom: 3rem;
 }
 
 .first-section h2 {
@@ -154,51 +160,6 @@ html {
 
 
 
-/* Sobre nos */
-
-
-.sobre-nos {
-    background-color: #1f1e1f;
-    width: 100%;
-    padding-bottom: 5rem;
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.contentsobre {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.main{
-    
-    display: flex;
-    justify-content: space-between;
-}
-
-.sobre-nos img {
-    width: 400px;
-    height: 400px;
-    margin-top: 10rem;
-    margin-left: 10rem;
-    border: 2px solid rgb(155, 155, 155);
-}
-
-.contentsobre h2 {
-    font-size: 6rem;
-    margin-bottom: 1rem;
-    font-family: 'Indie Flower', cursive;
- }
-
- .contentsobre p {
-    text-align: center;
-    font-size: 1.8rem;
-    width: 600px;
- }
 
  /* Cardapio */
 
@@ -293,6 +254,52 @@ html {
     color: rgb(255, 255, 255);
 }
 
+/* Sobre nos */
+
+
+.sobre-nos {
+    background-color: #1f1e1f;
+    width: 100%;
+    padding-bottom: 5rem;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contentsobre {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.main{
+    
+    display: flex;
+    justify-content: space-between;
+}
+
+.sobre-nos img {
+    width: 400px;
+    height: 400px;
+    margin-top: 10rem;
+    margin-left: 10rem;
+    border: 2px solid rgb(155, 155, 155);
+}
+
+.contentsobre h2 {
+    font-size: 6rem;
+    margin-bottom: 1rem;
+    font-family: 'Indie Flower', cursive;
+ }
+
+ .contentsobre p {
+    text-align: center;
+    font-size: 1.8rem;
+    width: 600px;
+ }
+
 
 .contatos {
     width: 100%;
@@ -382,11 +389,12 @@ footer {
         height: 4px;
         background-color: white;
         margin: 6px auto;
+
         transition-duration: 0.5s ;
     }
 
     .menu-toggle {
-        width: 30px;
+        width: 40px;
         height: 30px;
         
 
